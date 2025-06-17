@@ -7,7 +7,6 @@
   <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;500;700&display=swap" rel="stylesheet" />
   <link rel="icon" href="https://cdn-icons-png.flaticon.com/512/6132/6132222.png" type="image/png" />
   <style>
-    /* Reset & basics */
     * {
       margin: 0;
       padding: 0;
@@ -35,9 +34,7 @@
       align-items: center;
       background: #121212;
       box-shadow: 0 0 10px rgba(0,0,0,0.4);
-      position: sticky;
-      top: 0;
-      z-index: 1000;
+      
     }
 
     header h1 {
@@ -127,6 +124,7 @@
     .section-title {
       text-align: center;
       margin-top: 4rem;
+      margin-bottom: 3rem;
       font-size: 2.6rem;
       color: #00d1ff;
     }
@@ -172,6 +170,15 @@
     @keyframes scrollSkills {
       0% { transform: translateX(0); }
       100% { transform: translateX(-50%); }
+    }
+
+    .about p {
+      max-width: 1000px;
+      margin: auto;
+      text-align: center;
+      color: #ccc;
+      font-size: 2rem;
+      line-height: 1.8;
     }
 
     /* Projects */
@@ -323,8 +330,10 @@
     <h1>Aadyy.<span>Developer</span></h1>
     <nav>
       <a href="#" class="active">Home</a>
+      <a href="#about" >About</a>
       <a href="#projects">Projects</a>
       <a href="#contact">Contact</a>
+
     </nav>
   </header>
 
@@ -367,9 +376,16 @@
     </div>
   </section>
 
+
+     <!-- About -->
+  <section class="about" id="about">
+    <h3 class="section-title">About Me</h3>
+    <p>
+      I'm Aditya Saini, a passionate web developer with expertise in front-end and back-end technologies. I love building clean, responsive, and high-performance web apps. Always learning, always building. I believe in writing scalable code and creating smooth user experiences.
+    </p>
+  </section>
+
  
-
-
   <section class="projects" id="projects">
     <h3 class="section-title">Projects</h3>
     <div class="projects-grid">
@@ -392,36 +408,38 @@
         </div>
       </div>
       <div class="project-box">
-        <img src="https://via.placeholder.com/600x300?text=Task+Manager" alt="Task Manager" />
-        <h4>Task Manager</h4>
-        <p>MERN task app with authentication and drag-n-drop support.</p>
+        <img src="/Screenshot 2025-06-15 113317.png" alt="Task Manager" />
+        <h4>Image Gallery </h4>
+        <p style="margin: 0.5rem 0; color: #ccc; font-size: 1rem; flex-grow: 1;">
+          Responsive 4k quality image gallery. Futuristic Dark design.
+        </p>
+        <div class="project-buttons">
+          <a href="https://github.com/Aditya-Developer-2007/CodeAlpha_ImageGalley" target="_blank" rel="noopener noreferrer">GitHub</a>
+          <a href="https://aditya-developer-2007.github.io/CodeAlpha_ImageGalley/" target="_blank" rel="noopener noreferrer">Live Demo</a>
+        </div>
+      </div>
+      <div class="project-box">
+        <img src="/Screenshot 2025-06-15 112422.png" alt="Portfolio Site" />
+        <h4>Calculator</h4>
+        <p>Calculator app with real time live output with Dark futuristic design.</p>
         <div class="project-buttons">
           <a href="#" target="_blank" rel="noopener noreferrer">GitHub</a>
           <a href="#" target="_blank" rel="noopener noreferrer">Live Demo</a>
         </div>
       </div>
       <div class="project-box">
-        <img src="https://via.placeholder.com/600x300?text=Portfolio+Site" alt="Portfolio Site" />
-        <h4>Portfolio Site</h4>
-        <p>My personal portfolio showcasing projects and skills.</p>
+        <img src="" alt="" />
+        <h4>Blank</h4>
+        <p>In Progress</p>
         <div class="project-buttons">
           <a href="#" target="_blank" rel="noopener noreferrer">GitHub</a>
           <a href="#" target="_blank" rel="noopener noreferrer">Live Demo</a>
         </div>
       </div>
       <div class="project-box">
-        <img src="https://via.placeholder.com/600x300?text=Blog+Platform" alt="Blog Platform" />
-        <h4>Blog Platform</h4>
-        <p>Full-stack blog platform with user authentication.</p>
-        <div class="project-buttons">
-          <a href="#" target="_blank" rel="noopener noreferrer">GitHub</a>
-          <a href="#" target="_blank" rel="noopener noreferrer">Live Demo</a>
-        </div>
-      </div>
-      <div class="project-box">
-        <img src="https://via.placeholder.com/600x300?text=E-commerce+App" alt="E-commerce App" />
-        <h4>E-commerce App</h4>
-        <p>Online store with shopping cart and payment integration.</p>
+        <img src="" alt="" />
+        <h4>Blank</h4>
+        <p>In Progress</p>
         <div class="project-buttons">
           <a href="#" target="_blank" rel="noopener noreferrer">GitHub</a>
           <a href="#" target="_blank" rel="noopener noreferrer">Live Demo</a>
@@ -448,6 +466,10 @@
       <a href="https://www.instagram.com/aadyy.developer/" target="_blank" aria-label="Instagram" rel="noopener noreferrer">
         <img src="https://cdn-icons-png.flaticon.com/512/174/174855.png" alt="Instagram" />
       </a>
+      <a href="mailto:aaditya.saini2602@gmail.com" target="_blank" aria-label="Email" rel="noopener noreferrer">
+        <img src="https://cdn-icons-png.flaticon.com/512/732/732200.png" alt="Email" />
+      </a>
+
     </div>
   </section>
 
@@ -477,7 +499,7 @@
       navLinks.forEach(link => {
         link.classList.remove('active');
         if (currentSectionId === 'hero' && link.getAttribute('href') === '#') {
-          link.classList.add('active');
+          link.classList.add('active'); 
         } else if (link.getAttribute('href') === `#${currentSectionId}`) {
           link.classList.add('active');
         }
